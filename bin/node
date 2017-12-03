@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# ┌───────────────────────────────────────────┐
+# │ Pozzed Ubuntu node.js executable name fix │
+# └───────────────────────────────────────────┘
+# ⚒ John Lettman <the@johnlettman.com>
+nodejs $@
