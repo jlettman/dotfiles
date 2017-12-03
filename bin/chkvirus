@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# ┌──────────────────────────────┐
+# │ ClamAV virus check shorthand │
+# └──────────────────────────────┘
+# 📂 ~/bin/chkvirus
+# ⚒ John Lettman <the@johnlettman.com>
+
+# 💬 Check if ClamAV is installed
+command -v clamav >/dev/null 2>&1 || { 
+    echo >&2 "This system is missing ClamAV. Exiting."
+    exit 1
+}
+
+# 💬 Scan all of /home
+clamscan --recursive=yes --infected /home

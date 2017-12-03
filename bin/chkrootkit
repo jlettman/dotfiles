@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# ┌───────────────────────────────────────────┐
+# │ Rootkit Hunter (rkhunter) check shorthand │
+# └───────────────────────────────────────────┘
+# 📂 ~/bin/chkrootkit
+# ⚒ John Lettman <the@johnlettman.com>
+
+# 💬 Check if rkhunter is installed
+command -v rkhunter >/dev/null 2>&1 || { 
+    echo >&2 "This system is missing rkhunter. Exiting."
+    exit 1
+}
+
+# 💬 Update Rootkit Hunter (rkhunter) definitions
+sudo rkhunter --update
+sudo rkhunter --propupd
+
+# 💬 Check for rookits
+sudo rkhunter --check

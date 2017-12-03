@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# ┌───────────────────────────────────────────┐
+# │ ClamAV virus definitions update shorthand │
+# └───────────────────────────────────────────┘
+# 📂 ~/bin/updantivirus
+# ⚒ John Lettman <the@johnlettman.com>
+
+# 💬 Check if Freshclam is installed
+command -v freshclam >/dev/null 2>&1 || { 
+    echo >&2 "This system is missing Freshclam. Exiting."
+    exit 1
+}
+
+# 💬 Update definitions
+sudo freshclam
