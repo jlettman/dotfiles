@@ -1,0 +1,90 @@
+{
+	"name": "ssh",
+	"displayName": "SSH Tooling",
+	"description": "Edit SSH config and launch host configrations",
+	"version": "0.0.3",
+	"publisher": "chrmarti",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/chrmarti/vscode-ssh.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/chrmarti/vscode-ssh/issues"
+	},
+	"icon": "images/icon.png",
+	"engines": {
+		"vscode": "^1.18.0"
+	},
+	"categories": [
+		"Languages",
+		"Snippets"
+	],
+	"keywords": [
+		"multi-root ready"
+	],
+	"activationEvents": [
+		"onLanguage:ssh_config",
+		"onCommand:ssh.launch",
+		"onCommand:ssh.openUserConfig",
+		"onCommand:ssh.openWorkspaceConfig"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"languages": [
+			{
+				"id": "ssh_config",
+				"aliases": [
+					"ssh config",
+					"ssh_config"
+				],
+				"filenamePatterns": [
+					"**/.ssh/config"
+				],
+				"filenames": [
+					"ssh.config",
+					"config"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "ssh_config",
+				"scopeName": "source.config.ssh",
+				"path": "./syntaxes/ssh_config.tmLanguage.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "ssh.launch",
+				"title": "SSH: Launch from Configuration"
+			},
+			{
+				"command": "ssh.openUserConfig",
+				"title": "SSH: Open User Configuration"
+			},
+			{
+				"command": "ssh.openWorkspaceConfig",
+				"title": "SSH: Open Workspace Configuration"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/node": "^7.0.13",
+		"tslint": "^5.1.0",
+		"typescript": "^2.3.1",
+		"vscode": "^1.0.0"
+	},
+	"__metadata": {
+		"id": "e755a38c-3c32-4143-9913-3ad99c19208a",
+		"publisherId": "6c6b26a3-e134-4d03-ad02-7e48f7c9f342",
+		"publisherDisplayName": "Christof Marti"
+	}
+}

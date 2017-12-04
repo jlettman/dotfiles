@@ -1,0 +1,60 @@
+{
+	"name": "lualinter",
+	"displayName": "Lua linter",
+	"description": "Lint Lua scripts with luac or luajit",
+	"homepage": "https://github.com/dcr30/vscode-lualinter#readme",
+	"version": "1.0.3",
+	"publisher": "dcr30",
+	"icon": "icon.svg",
+	"galleryBanner": {
+		"color": "#050523",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Linters"
+	],
+	"activationEvents": [
+		"onLanguage:lua"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Lua linter configuration",
+			"properties": {
+				"lualinter.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable Lua linter"
+				},
+				"lualinter.warnOnSave": {
+					"type": "boolean",
+					"default": false,
+					"description": "Show warning message if there is an error when saving a file"
+				},
+				"lualinter.interpreter": {
+					"type": "string",
+					"default": "luac",
+					"description": "Choose between luac and luajit interpreters"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^1.8.5",
+		"vscode": "^0.11.0"
+	},
+	"__metadata": {
+		"id": "38ce151d-bde3-4e23-893b-29e1febf5490",
+		"publisherId": "cb04c61a-15f4-4eeb-8157-4f5879220cd6",
+		"publisherDisplayName": "Nikita Bredikhin"
+	}
+}

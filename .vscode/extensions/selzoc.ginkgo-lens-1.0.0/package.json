@@ -1,0 +1,89 @@
+{
+	"name": "ginkgo-lens",
+	"displayName": "Ginkgo Lens",
+	"description": "Provides CodeLens support for running Ginkgo tests",
+	"version": "1.0.0",
+	"publisher": "selzoc",
+	"author": {
+		"name": "Chris Selzo"
+	},
+	"license": "MIT",
+	"categories": [
+		"Languages",
+		"Other"
+	],
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/selzoc/ginkgo-lens.git"
+	},
+	"engines": {
+		"vscode": "^1.13.0"
+	},
+	"activationEvents": [
+		"onLanguage:go"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "ginkgo.test.file",
+				"title": "Ginkgo: Test File",
+				"description": "Runs all ginkgo unit tests in the current file."
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "resourceLangId == go",
+					"command": "ginkgo.test.file",
+					"group": "2_test"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "Ginkgo Lens configuration",
+			"properties": {
+				"ginkgolens.args": {
+					"type": "array",
+					"default": [],
+					"description": "Arguments to pass to ginkgo."
+				},
+				"ginkgolens.showCommand": {
+					"type": "boolean",
+					"default": false,
+					"description": "Display the ginkgo command in the test output."
+				},
+				"ginkgolens.includeFile": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show CodeLens for test files."
+				},
+				"ginkgolens.includeIts": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show CodeLens for It specs."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	},
+	"__metadata": {
+		"id": "1cdf0fbc-ac21-4914-b8dc-dac95c146fe5",
+		"publisherId": "5cac0d29-268a-4c76-adf3-5887eb5514c0",
+		"publisherDisplayName": "Chris Selzo"
+	}
+}

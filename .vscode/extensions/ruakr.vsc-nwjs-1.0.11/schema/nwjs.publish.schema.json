@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties":{
+        "nwjsVersion":{
+            "type": "string",
+            "description": "NWjs version",
+            "default": "any",
+            "pattern": "^([0-9]+\\.[0-9]+\\.[0-9]+(-(alpha[0-9]+|beta[0-9]+|rc[0-9]+))?|any)$"
+        },
+        "package":{
+            "$ref": "package.schema.json",
+            "description": "For override package.json"
+        },
+        "html":{
+            "type": "array",
+            "description": "Contains html files. Can use glob.\nReferenced scripts will compiled by nwjc",
+            "items":{"type":"string"}
+        },
+        "files":{
+            "type": "array",
+            "description": "Contains files. Can use glob. will compressed by zip",
+            "items":{"type":"string"}
+        },
+        "exclude":{
+            "type": "array",
+            "description": "Exclude file from nwjs files. for unusing DLL",
+            "items":{"type":"string"}
+        }
+    }
+}

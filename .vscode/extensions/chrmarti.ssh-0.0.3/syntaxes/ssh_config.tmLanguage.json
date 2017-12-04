@@ -1,0 +1,36 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ssh config",
+	"patterns": [
+		{
+			"include": "#properties"
+		},
+		{
+			"include": "#values"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"properties": {
+			"patterns": [{
+				"name": "support.type.property-name.ssh_config",
+				"match": "^\\s*[^\\s#]+"
+			}]
+		},
+		"values": {
+			"patterns": [{
+				"name": "string.quoted.double.ssh_config",
+				"match": "[^#]+"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.hash.azcli",
+				"match": "#.*"
+			}]
+		}
+	},
+	"scopeName": "source.config.ssh"
+}

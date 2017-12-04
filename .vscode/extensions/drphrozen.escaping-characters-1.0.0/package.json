@@ -1,0 +1,87 @@
+{
+	"name": "escaping-characters",
+	"displayName": "escaping-characters",
+	"description": "This extensions adds escape/unescape methods for JavaScript special characters",
+	"version": "1.0.0",
+	"license": "MIT",
+	"publisher": "drphrozen",
+	"engines": {
+		"vscode": "^1.4.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"octal",
+		"hex",
+		"unicode",
+		"entity",
+		"code point"
+	],
+	"homepage": "https://github.com/drphrozen/vscode-escaping-characters",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/drphrozen/vscode-escaping-characters.git"
+	},
+	"activationEvents": [
+		"onCommand:extension.escapeHex",
+		"onCommand:extension.escapeOctal",
+		"onCommand:extension.escapeUnicode",
+		"onCommand:extension.escapeUnicodeES6",
+		"onCommand:extension.unescapeAll",
+		"onCommand:extension.unescapeHex",
+		"onCommand:extension.unescapeOctal",
+		"onCommand:extension.unescapeUnicode"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.escapeHex",
+				"title": "Escape Hex (\\xXX)"
+			},
+			{
+				"command": "extension.escapeOctal",
+				"title": "Escape Octal (\\###)"
+			},
+			{
+				"command": "extension.escapeUnicode",
+				"title": "Escape Unicode JSON (\\uXXXX)"
+			},
+			{
+				"command": "extension.escapeUnicodeES6",
+				"title": "Escape Unicode ES6 (\\u{XXXXX})"
+			},
+			{
+				"command": "extension.unescapeAll",
+				"title": "Unescape All (\\xXX, \\###, \\uXXXX, \\u{XXXXX})"
+			},
+			{
+				"command": "extension.unescapeHex",
+				"title": "Unescape Hex (\\xXX)"
+			},
+			{
+				"command": "extension.unescapeOctal",
+				"title": "Unescape Octal (\\###)"
+			},
+			{
+				"command": "extension.unescapeUnicode",
+				"title": "Unescape Unicode (\\uXXXX, \\u{XXXXX})"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^1.8.5",
+		"vscode": "^0.11.0"
+	},
+	"__metadata": {
+		"id": "2842da14-aeb3-479c-904a-ae66a05953f6",
+		"publisherId": "cc3a07f5-20e8-41f8-8cad-b3c75ea06573",
+		"publisherDisplayName": "drphrozen"
+	}
+}

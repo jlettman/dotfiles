@@ -1,0 +1,27 @@
+{
+	"name": "Breeze-Dark-Theme",
+	"displayName": "Breeze Dark Theme for VS Code",
+	"description": "KDE Plasma's Breeze Dark theme for VS Code",
+	"version": "0.0.1",
+	"publisher": "AndrewFridley",
+	"engines": {
+		"vscode": "^1.17.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Breeze Dark Theme",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Breeze Dark Theme-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "dc018cbf-3c7e-4798-af47-a5845066c7dd",
+		"publisherId": "378254d9-976f-4d9f-b8f8-e99753001b29",
+		"publisherDisplayName": "AndrewFridley"
+	}
+}

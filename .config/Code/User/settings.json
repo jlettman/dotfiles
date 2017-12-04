@@ -1,0 +1,512 @@
+{
+
+    //
+    // ─── TELEMETRY ──────────────────────────────────────────────────────────────
+    //
+
+    // Anti-Microsoft spying
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+
+    //
+    // ─── USER INTERFACE ─────────────────────────────────────────────────────────
+    //
+
+    // 🗔 Window configuration
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
+
+    "window.zoomLevel": 0,
+
+    "window.restoreWindows": "none",                // don't restore old editors
+    "window.openFoldersInNewWindow": "on",          // folder per window
+    "window.newWindowDimensions": "maximized",
+
+    //  Extensions
+    "extensions.autoUpdate": true,
+    "extensions.ignoreRecommendations": true,
+
+    // Keybinding options
+    "atomKeymap.promptV3Features": true,
+
+    // 📌 Workbench configuration
+    "workbench.startupEditor": "newUntitledFile",
+
+    "workbench.sideBar.location": "left",
+    "workbench.panel.location": "bottom",
+
+    "workbench.editor.enablePreview": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.openPositioning": "right",
+
+    // 🖼 Workbench theme
+    "workbench.colorTheme": "Breeze Dark Theme",
+    "workbench.iconTheme": "vscode-icons",
+
+    // 🖼 Zen mode theme (get it to calm down a bit)
+    "zenMode.fullScreen": false,                    // don't force fullscreen
+    "zenMode.hideTabs": false,                      // don't hide my tabs
+
+    // 🖻 Icons
+    "vsicons.presets.angular": true,                // detect angular project types
+    "vsicons.presets.jsOfficial": true,             // "JS" in square icon
+    "vsicons.presets.tsOfficial": true,             // "TS" in square icon
+    "vsicons.presets.jsonOfficial": true,           // "JSON" in square icon
+    "vsicons.dontShowNewVersionMessage": true,      // don't notify of updates
+    "vsicons.projectDetection.autoReload": true,    // auto-reload without prompt
+
+    //
+    // ─── EDITOR USER INTERFACE ──────────────────────────────────────────────────
+    //
+
+    // ✎ Editor configuration
+    "editor.tabSize": 4,
+
+    "editor.fontFamily": "Fira Code, Hasklig, OperatorMono Nerd Font, Inconsolata, Consolas, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.fontWeight": "400",
+    "editor.fontLigatures": true,                   // show fancy stuff like: -> != ~=
+    "editor.lineHeight": 0,                         // good luck messing with this...
+
+    "editor.dragAndDrop": false,
+    "editor.formatOnPaste": true,                   // format copypastas
+    "editor.formatOnType": true,                    // format while programming
+    "editor.formatOnSave": false,                   // don't format on save
+
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.parameterHints": true,
+
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.snippetSuggestions": "bottom",
+    "editor.acceptSuggestionOnEnter": "smart",
+
+    "editor.cursorStyle": "block",                  // mimic terminal
+    "editor.cursorBlinking": "smooth",              // smooth blinken
+    "editor.smoothScrolling": true,                 // scroll animation
+    "editor.scrollBeyondLastLine": false,           // annoying otherwise
+    "editor.roundedSelection": true,                // border-radius to highlights
+    "editor.selectionHighlight": false,             // don't highlight similar text
+    "editor.multiCursorModifier": "ctrlCmd",
+
+    "editor.autoClosingBrackets": true,             // autoclose brackets
+
+    "editor.renderLineHighlight": "all",            // highlight line, #, gutter
+    "editor.renderWhitespace": "none",              // don't show me whitespace
+    "editor.renderControlCharacters": true,         // show oddball chars
+    "editor.renderIndentGuides": true,              // show guides to limit line length
+
+    "editor.rulers": [80, 120],
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.enabled": true,
+    "editor.lineNumbers": "on",                     // force line numbering
+
+    //
+    // ─── INTEGRATED TOOLS ──────────────────────────────────────────────────────
+    //
+
+    // Debugging
+    "debug.inlineValues": true,
+    "debug.allowBreakpointsEverywhere": false,
+
+    // Alignment tool
+    "align.rightSeparators": ["=", "+=", "-=", "*=", "/=", "?=", "|=", "%=",
+        ".=", "=>", "from"],
+
+    "align.spaceSeparators": ["=", "+=", "-=", "*=", "/=", "?=", "|=", "%=",
+        ".=", "=>", "from"],
+
+    //  Terminal
+    "terminal.external.linuxExec": "konsole",
+    "terminal.integrated.shell.linux": "/bin/zsh",
+
+    "terminal.integrated.fontFamily": "Hasklug Nerd Font Mono, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.enableBold": true,
+    "terminal.integrated.lineHeight": 1,
+
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.cursorBlinking": true,
+
+    "terminal.integrated.scrollback": 5000,
+
+    // Explorer functionality
+    "explorer.openEditors.visible": 0,              // disable redundant "open editors", just use tabs
+
+    "explorer.confirmDragAndDrop": false,
+    "explorer.decorations.colors": true,
+
+    // New files
+    "newFile.showPathRelativeTo": "project",
+    "newFile.relativeTo": "project",
+
+    // Diff editor
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    //
+    // ─── EXTERNAL TOOLS ─────────────────────────────────────────────────────────
+    //
+
+    //  Docker options
+    "docker.showExplorer": false,
+
+    //  Git
+    "git.enabled": true,
+    "git.confirmSync": true,
+    "git.autorefresh": true,                        // automatically refresh changes
+    "git.autofetch": true,                          // automatically fetch changesfalse
+
+    "git.defaultCloneDirectory": "~/Projects",      // clone stuff to Projects
+
+    "git.enableCommitSigning": true,                // use GPG to sign commits
+    "git.enableSmartCommit": true,                  // commit everything if none staged
+
+    "git.countBadge": "all",                        // show changes for everything
+    "git.decorations.enabled": true,                // show decorations to files
+
+    //  Gitlens
+    "gitlens.blame.line.enabled": false,            // spaces out lines too much
+    "gitlens.statusBar.enabled": false,             // status bar is acceptable
+    "gitlens.codeLens.enabled": true,               // lense is acceptable
+
+    "gitlens.advanced.telemetry.enabled": false,    // no telemetry spying
+
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+
+    //
+    // ─── PROGRAMMING LANGUAGES ──────────────────────────────────────────────────
+    //
+
+    //  Markdown language options
+    "markdown.preview.scrollEditorWithPreview": false,
+
+    "markdownlint.config": {
+        // Markdown Lint rules
+        // See: <https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md>
+
+        // MD013 limits line length. Markdown is difficult to manage
+        // when this rule is enforced as line wrapping breaks tags.
+        // See: <https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md#md013---line-length>
+        "MD013": {
+            "line_length": 120,
+
+            "headers": false,       // permit long headers
+            "tables": false,        // permit long tables
+            "code_blocks": false    // permit long code blocks
+        },
+
+        // MD024 is just asinine. It disallows the same headers.
+        // See: <https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md#md024---multiple-headers-with-the-same-content>
+        "MD024": false
+    },
+
+    "[markdown]": {
+        "editor.wordWrap": "bounded",
+        "editor.lineNumbers": "off",
+        "editor.quickSuggestions": false,
+        "editor.minimap.enabled": false,
+
+        "files.trimTrailingWhitespace": false
+    },
+
+
+    // HTML language options
+    "html.format.wrapLineLength": 0,            // don't wrap HTML code
+    "html.format.indentInnerHtml": true,
+
+    "[html]": {
+        "editor.tabSize": 2,                    // use a small tab size
+        "editor.insertSpaces": false            // don't use spaces (save space)
+    },
+
+    //  CSS language options
+    "css.validate": true,
+
+    "[css]": {
+        "editor.tabSize": 2
+    },
+
+    //  SASS / SCSS language options
+    "scss.validate": true,
+
+    "[scss]": {
+        "editor.tabSize": 2
+    },
+
+    //  JavaScript language options
+    "javascript.format.enable": false,
+    "javascript.validate.enable": false,
+
+    "javascript.implicitProjectConfig.checkJs": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+
+    //  TypeScript language options
+    "typescript.format.enable": false,
+    "typescript.validate.enable": false,
+
+    "typescript.referencesCodeLens.enabled": false,
+    "typescript.implementationsCodeLens.enabled": false,
+    "typescript.check.npmIsInstalled": false,
+
+    "[typescript]": {
+        "editor.tabSize": 2
+    },
+
+
+    // ESLint options
+    "eslint.enable": true,
+    "eslint.run": "onType",
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+
+    // JSHint options
+    "jshint.enable": false,
+
+    // PHP langauge options
+    "php.validate.enable": false,
+    "php.suggest.basic": false,
+
+    "[php]": {
+        "editor.tabSize": 2
+    },
+
+    //  Go language options
+    "go.lintOnSave": "package",
+    "go.vetOnSave": "package",
+    "go.formatTool": "goimports",
+    "go.formatOnSave": true,
+
+    "go.gopath": "~/Projects/Go",
+    "go.toolsGopath": "~/Projects/Go/tools",
+    "go.inferGopath": true,
+
+    "go.coverageDecorator": "highlight",
+    "go.autocompleteUnimportedPackages": true,
+    "go.useLanguageServer": true,
+
+    "go.liveErrors": {
+        "enabled": true,
+        "delay": 500
+    },
+
+    // Python language options
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+
+    // Makefile language options
+    "[makefile]": {
+        "editor.tabSize": 8,
+        "editor.insertSpaces": false
+    },
+
+
+    //
+    // ─── FILE CONFIGURATION ─────────────────────────────────────────────────────
+    //
+
+    // Search
+    "search.useIgnoreFilesByDefault": true,
+    "search.quickOpen.includeSymbols": true,
+
+    // File handling
+    "files.defaultLanguage": "markdown",    // marginally better than plaintext
+
+    "files.eol": "\n",                      // we unix son
+    "files.trimTrailingWhitespace": true,   // cleanup useless whitespace
+
+    // Associate custom files / extensions to the appropiate handlers
+    "files.associations": {
+        "*.js": "javascriptreact",          // assume we're using React.js
+        "*.eslintignore": "gitignore",      // ESLint ignore is like gitignore
+        "sshd_config": "ssh_config",        // sshd_config (server) is SSH configuration
+        "ssh_config": "ssh_config",         // ssh_config (client) is SSH configuration
+        "*.docker": "dockerfile"            // .docker files are docker as well
+    },
+
+    // Exclude files
+    "files.exclude": {
+        // Annoying Operating System garbage
+        "**/.DS_Store": true,           // MacOS garbage file, I don't even know what it is but I hate it
+
+        // Not code
+        "**/*.psd": true,               // Photoshop documents
+
+        // #########
+        // # Tools #
+        // #########
+
+        // Version control
+        "**/.git": true,                // Git directory
+        "**/.githooks": true,           // Git function hooks directory
+        "**/.hg": true,                 // Mercurial directory
+        "**/.svn": true,                // Subversion directory
+        "**/CVS": true,                 // Concurrent Version Control directory (it's not the 1900s bruv)
+
+        // Integrated Development Environments
+        "**/.vscode": false,            // VSCode persistent settings (allow edit)
+        "**/*.sublime-workspace": true, // Sublime persistent settings
+        "**/.idea": true,               // Intellij persistent settings
+
+        "**/*.suo": true,               // Visual Studio persistent settings (Solution User Options)
+        "**/*.pdb": true,               // Windows program debugging data
+        "**/*.idb": true,               // Windows incremental program debugging data
+
+        // Code browsing
+        "**/*.ctags": true,             // CTags
+        "**/*.ncb": true,               // Visual Studio Non-Compiled Browse
+
+        // ############
+        // # Binaries #
+        // ############
+
+        // Intermediate object binaries
+        "**/*.o": true,                 // Generic object intermediate binary
+        "**/*.obj": true,               // ditto
+
+        // Binaries
+        "**/*.exe": true,               // Windows executable
+        "**/.bundle": true,             // MacOS bundle
+
+        "**/*.so": true,                // GNU/Linux shared object dynamic library
+        "**/*.dll": true,               // Windows dynamic library
+        "**/*.dylib": true,             // MacOS dynamic library
+        "**/*.lib": true,               // Generic dynamic library
+
+        "**/*.a": true,                 // Generic static archive library
+
+        // #############################################
+        // # Generic undesirable directories and files #
+        // #############################################
+
+        // Generic vendoring
+        "/vendor": true,
+
+        // Generic temporal stuff
+        "log/*": true,                  // Logs (common)
+        "logs/*": true,                 // ditto (common)
+        "tmp/**/*": true,               // Temporary directory (common)
+        ".cached*": true,               // Cached files (somewhat common)
+
+        // Generic builds
+        "**/build": true,               // Build output (very common)
+        "**/_build": true,              // ditto (underscored; uncommon)
+
+        // Generic deployments
+        "**/dist": true,                // Distribution directory (very common)
+
+        "**/_deploy": true,             // Deployment directory (underscored; uncommon)
+        "**/_site": true,               // Site directory (underscored; uncommon)
+
+        // Generic unit testing
+        "**/coverage": true,            // Unit test coverage (very common)
+        "**/.coverage": true,           // ditto (dotted; very common)
+
+        // ##################
+        // # Virtualization #
+        // ##################
+
+        // Provisioning
+        "**/.vagrant": true,            // Vagrant provisioning
+
+        // #########################
+        // # Programming Languages #
+        // #########################
+
+        // Java
+        "**/*.class": true,             // Java class binary
+
+        // JavaScript
+        "**/node_modules": true,        // npm / yarn package management directory
+        "**/node_modules*": true,       // ditto (catch-all)
+        "**/bower_components": true,    // bower package management directory
+
+        "**/npm-debug.log*": true,      // npm error log
+        "**/npm-shrinkwrap.json": true, // npm vendoring lockfile
+        "**/yarn.lock": true,           // yarn vendoring lockfile
+
+        "**/.expo": true,               // expo stuff <https://expo.io/>
+
+        "**/*.js": {                    // compiled TypeScript
+            "when": "$(basename).ts"
+        },
+        "**/*.js.map": true,            // sourcemaps
+
+        // SASS
+        "**/.sass-cache": true,         // SASS cache
+
+        // Python
+        "**/__pycache__": true,         // Opcode cache (JIT?)
+        "**/*.pyc": true,               // JIT compiled binaries
+        "**/*.pyo": true,               // Intermediate compiled binaries
+
+        "**/venv": true,                // VirtualEnv (short form)
+        "**/.venv": true,               // VirtualEnv (short form; dotted)
+        "**/.virtualenv": true,         // VirtualEnv (long form; dotted)
+
+        "**/*.egg-info": true,          // Python package management (pip) metadata
+
+        "**/.pygments-cache": true,     // Pygments <http://pygments.org/> syntax highlighting cache
+        "**/.tox": true,                // Python tox files <https://en.wikipedia.org/wiki/Tox_(Python_testing_wrapper)>
+
+        // #############
+        // # Databases #
+        // #############
+
+        // Geospatial
+        // See: <https://en.wikipedia.org/wiki/Spatial_Data_File_(format)>
+        "**/*.sdf": true,               // Spatial Data Format (can't edit; SQLite)
+
+        // Database
+        "**/*.sqlite": true,            // SQLite (can't edit; binary)
+        "**/*.sqlite3": true,           // ditto
+        "**/*.db": true                 // ditto
+    },
+
+    //
+    // ─── COMPANY AND WORKPLACE ──────────────────────────────────────────────────
+    //
+
+    // Bitbucket repository hosts
+    "codebucket.bitbucketHosts": [
+        // Default
+        "http://bitbucket.org",
+
+        // Aethon, Inc. Bitbucket, (not supported yet)
+        // "http://git.aethon.local:7990"
+    ],
+
+    // JIRA issue trackers
+    "codebucket.issueTrackers": [
+        { // Aethon, Inc. JIRA
+            "type": "jira",
+            "host": "http://git.aethon.local:8081",
+
+            // Obtained from:
+            // <http://git.aethon.local:8081/secure/BrowseProjects.jspa?selectedCategory=all&selectedProjectType=all>
+            "projectKeys": [
+                "CONCIERGE", "FLEET", "HELIOS", "MEDEX", "REPORTS", "SPI",
+                "TEST", "TRAYSAFE", "TUBESAFE", "TWI"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+2017-12-03T03:13:12.786Z - info: [DeclarationIndexMapper] initializing index mapper for 1 workspaces
+2017-12-03T03:13:12.794Z - info: [DeclarationIndexMapper] initialized
+2017-12-03T03:13:12.797Z - info: [ImportResolveExtension] initialized
+2017-12-03T03:13:12.798Z - info: [CodeCompletionExtension] initialized
+2017-12-03T03:13:12.799Z - info: [DocumentSymbolStructureExtension] initialized
+2017-12-03T03:13:12.800Z - info: [CodeActionCreator] initialized
+2017-12-03T03:13:12.801Z - info: [OrganizeImportsOnSaveExtension] initialized
+2017-12-03T03:13:12.802Z - info: [TypeScriptHero] initialized
+2017-12-03T03:13:13.180Z - info: [DeclarationIndexMapper] built index for workspace "preq" {"durationMs":392}
+2017-12-03T03:15:46.190Z - info: [ImportResolveExtension] disposed
+2017-12-03T03:15:46.191Z - info: [CodeCompletionExtension] disposed
+2017-12-03T03:15:46.192Z - info: [DocumentSymbolStructureExtension] disposed
+2017-12-03T03:15:46.192Z - info: [CodeActionCreator] disposed
+2017-12-03T03:15:46.192Z - info: [OrganizeImportsOnSaveExtension] disposed
+2017-12-03T03:15:46.193Z - info: [TypeScriptHero] disposed
+2017-12-03T03:15:51.408Z - info: [DeclarationIndexMapper] initializing index mapper for 1 workspaces
+2017-12-03T03:15:51.415Z - info: [DeclarationIndexMapper] initialized
+2017-12-03T03:15:51.416Z - info: [ImportResolveExtension] initialized
+2017-12-03T03:15:51.417Z - info: [CodeCompletionExtension] initialized
+2017-12-03T03:15:51.418Z - info: [DocumentSymbolStructureExtension] initialized
+2017-12-03T03:15:51.418Z - info: [CodeActionCreator] initialized
+2017-12-03T03:15:51.419Z - info: [OrganizeImportsOnSaveExtension] initialized
+2017-12-03T03:15:51.419Z - info: [TypeScriptHero] initialized
+2017-12-03T03:15:51.688Z - info: [DeclarationIndexMapper] built index for workspace "preq" {"durationMs":278}
+2017-12-03T03:32:43.939Z - info: [ImportResolveExtension] disposed
+2017-12-03T03:32:43.956Z - info: [CodeCompletionExtension] disposed
+2017-12-03T03:32:43.962Z - info: [DocumentSymbolStructureExtension] disposed
+2017-12-03T03:32:43.962Z - info: [CodeActionCreator] disposed
+2017-12-03T03:32:43.963Z - info: [OrganizeImportsOnSaveExtension] disposed
+2017-12-03T03:32:43.963Z - info: [TypeScriptHero] disposed

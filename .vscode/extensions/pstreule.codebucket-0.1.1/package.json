@@ -1,0 +1,148 @@
+{
+	"name": "codebucket",
+	"displayName": "CodeBucket",
+	"description": "Bitbucket extension for vscode - quickly open the PR or issue that introduced a line of code",
+	"version": "0.1.1",
+	"author": {
+		"name": "Patrick Streule"
+	},
+	"publisher": "pstreule",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://bitbucket.org/pstreule/codebucket"
+	},
+	"homepage": "https://bitbucket.org/pstreule/codebucket",
+	"bugs": {
+		"url": "https://bitbucket.org/pstreule/codebucket/issues"
+	},
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"bitbucket",
+		"jira",
+		"pullrequest",
+		"git",
+		"issue"
+	],
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#0052CC",
+		"theme": "dark"
+	},
+	"activationEvents": [
+		"onCommand:codebucket.open",
+		"onCommand:codebucket.openChangeset",
+		"onCommand:codebucket.openPullRequest",
+		"onCommand:codebucket.openIssue"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configuration": {
+			"title": "CodeBucket Configuration",
+			"properties": {
+				"codebucket.bitbucketHosts": {
+					"description": "A list of hosts to identify as Bitbucket. For the vast majority of users this should just stay as the default of ['bitbucket.org'].",
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"codebucket.issueTrackers": {
+					"description": "A list of issue trackers you use, to power the 'Open in Issue Tracker' command. The bitbucket host is automatically used as issue trackers.",
+					"type": "array",
+					"items": {
+						"description": "An issue tracker configuration. Currently only JIRA is supported.",
+						"type": "object",
+						"required": [
+							"type",
+							"host",
+							"projectKeys"
+						],
+						"properties": {
+							"type": {
+								"description": "Only JIRA is supported at the moment",
+								"enum": [
+									"jira"
+								]
+							},
+							"host": {
+								"description": "The URL of the issue tracker",
+								"type": "string"
+							},
+							"projectKeys": {
+								"description": "A list of project keys that should be matched",
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "codebucket.open",
+				"title": "Bitbucket: Open"
+			},
+			{
+				"command": "codebucket.openChangeset",
+				"title": "Bitbucket: Open Changeset"
+			},
+			{
+				"command": "codebucket.openPullRequest",
+				"title": "Bitbucket: Open Pull Request"
+			},
+			{
+				"command": "codebucket.openIssue",
+				"title": "Bitbucket: Open Issue"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "codebucket.open",
+					"group": "bitbucket"
+				},
+				{
+					"command": "codebucket.openChangeset",
+					"group": "bitbucket"
+				},
+				{
+					"command": "codebucket.openPullRequest",
+					"group": "bitbucket"
+				},
+				{
+					"command": "codebucket.openIssue",
+					"group": "bitbucket"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"clean": "git clean -xdf",
+		"vscode:package": "git clean -xdf && vsce package --baseImagesUrl https://bytebucket.org/pstreule/codebucket/raw/master",
+		"vscode:publish": "git clean -xdf && vsce publish --baseImagesUrl https://bytebucket.org/pstreule/codebucket/raw/master",
+		"vscode:prepublish": "yarn && tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"@types/node": "^6.0.87",
+		"tslint": "^5.6.0",
+		"typescript": "^2.4.2",
+		"vscode": "^1.0.0"
+	},
+	"dependencies": {},
+	"__metadata": {
+		"id": "7fe6273d-2440-4a73-b9f7-04e3a651ea3d",
+		"publisherId": "c2cbfc85-5934-4e9f-9cc7-26f96ebb9ff7",
+		"publisherDisplayName": "Patrick Streule"
+	}
+}
