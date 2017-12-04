@@ -81,7 +81,7 @@ fi
 
 # Ditto for Zsh itself
 # <https://github.com/trapd00r/zsh-syntax-highlighting-filetypes>
-zplug "zsh-syntax-highlighting-filetypes", use:zsh-syntax-highlighting-filetypes.zsh
+zplug "zsh-syntax-highlighting-filetypes"
 
 # Colorized man pages
 # <https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/colored-man-pages>
