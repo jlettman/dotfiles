@@ -1,5 +1,5 @@
-⌂ [John Lettman](mailto:John Lettman <jlettman@aethon.com>) GNU/Linux dotfiles
-==============================================================================
+⌂ John Lettman GNU/Linux dotfiles
+=================================
 
 This repository contains personalized configuration files (dotfiles) for working
 in a GNU/Linux environment on Golang, PHP, Python, C, C++, Shell scripts, and
